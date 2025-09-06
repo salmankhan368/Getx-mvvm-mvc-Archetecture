@@ -9,7 +9,7 @@ class AppExceptions implements Exception {
 
 class InternetException extends AppExceptions {
   InternetException([String? message])
-    : super(message, 'No Internet Connection');
+    : super(message, 'No Internet Connection some thing went wrong');
 }
 
 class RequestTimeOut extends AppExceptions {
@@ -17,5 +17,14 @@ class RequestTimeOut extends AppExceptions {
 }
 
 class ServerException extends AppExceptions {
-  ServerException([String? message]);
+  ServerException([String? message]) : super(message, 'Server error');
+}
+
+class InvalidUrlException extends AppExceptions {
+  InvalidUrlException([String? message]) : super(message, 'invalid Url ');
+}
+
+class FetchDataException extends AppExceptions {
+  FetchDataException([String? message])
+    : super(message, 'Error accured while communication with server ');
 }
