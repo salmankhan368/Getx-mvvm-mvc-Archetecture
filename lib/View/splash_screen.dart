@@ -11,12 +11,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return Center(
+      child: Container(
+        color: Colors.deepPurple[300],
         child: Lottie.network(
-          height: 100,
-          width: 100,
-          "https://lottie.host/708d9a4a-2a46-40d8-bb99-6c253cedf64f/9yD6H1wGpV.json",
+          "https://lottie.host/3a934c74-e2dc-4ec2-b158-dff32c0f086d/TesuLhlbjR.json",
         ),
       ),
     );
