@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+
+import 'package:project_getx_mvc_mvvm/Rosources/assets/assets_image.dart';
+// import 'package:get/get_utils/src/extensions/internacionalization.dart';
+// import 'package:project_getx_mvc_mvvm/Rosources/app_colors.dart';
+// import 'package:project_getx_mvc_mvvm/Rosources/components/general_exception.dart';
+// import 'package:project_getx_mvc_mvvm/Rosources/components/internet_exceiption_widgets.dart';
+// import 'package:project_getx_mvc_mvvm/Rosources/components/round_button.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -11,13 +17,30 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color: Colors.deepPurple[300],
-        child: Lottie.network(
-          "https://lottie.host/3a934c74-e2dc-4ec2-b158-dff32c0f086d/TesuLhlbjR.json",
-        ),
-      ),
+    return Scaffold(
+      body: Container(child: Image(image: AssetImage(AssetsImage.splash))),
     );
   }
 }
+//ROUNDbUTTONtESTING
+  // RoundButton(
+  //           title: "Login",
+  //           loading: true,
+  //           width: double.infinity,
+  //           buttonColor: AppColors.primaryColor,
+  //           onPress: () {},
+  //         ),
+  //         RoundButton(
+  //           title: "SIgnup",
+  //           loading: false,
+  //           // width: double.infinity,
+  //           buttonColor: AppColors.primaryColor,
+  //           onPress: () {},
+  //         ),
+  
+
+
+
+  //GENERAL AND INTERNET EXCEPTION TESTING
+    //GeneralExceiptionWidgets(onPress: () {});
+    //InternetExceiptionWidgets(onPress: () {});

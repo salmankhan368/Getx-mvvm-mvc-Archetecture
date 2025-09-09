@@ -16,7 +16,7 @@ class Utils {
   static toastMessage(String message) {
     Fluttertoast.showToast(
       msg: message,
-      backgroundColor: AppColors.redcolor,
+      backgroundColor: AppColors.red,
       toastLength: Toast.LENGTH_SHORT,
       textColor: AppColors.white,
       timeInSecForIosWeb: 3,
@@ -28,7 +28,7 @@ class Utils {
     Get.snackbar(
       title,
       message,
-      backgroundColor: AppColors.redcolor,
+      backgroundColor: AppColors.red,
       colorText: AppColors.white,
 
       // borderColor: AppColors.white,
