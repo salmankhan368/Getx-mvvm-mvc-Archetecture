@@ -3,7 +3,11 @@ import 'package:get/get_navigation/get_navigation.dart';
 class Languages extends Translations {
   Map<String, Map<String, String>> get keys => {
     'en_US': {
-      'email_hint': "Enter your email plz",
+      'email_hint': "Email",
+      'password_hint': "password",
+      'enter_email': "Enter your Email please",
+      'enter_password': "Enter your password please",
+      'login': 'login',
       'internet_exception':
           "We 'r unable to show your result.\nPlease check your internet\nconnection.",
       'general_exception':

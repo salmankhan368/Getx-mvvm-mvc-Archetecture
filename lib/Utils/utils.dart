@@ -29,7 +29,7 @@ class Utils {
       title,
       message,
       backgroundColor: AppColors.red,
-      colorText: AppColors.white,
+      colorText: AppColors.black,
 
       // borderColor: AppColors.white,
       snackPosition: SnackPosition.TOP,
