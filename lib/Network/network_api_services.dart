@@ -47,11 +47,22 @@ class NetworkApiServices extends BaseApiServices {
     }
     dynamic responseJson;
     try {
+      var headers = {
+        'x-api-key': 'reqres-free-v1',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      };
+
+      // try {
+      //   final response = await http
+      //       .post(Uri.parse(url), body: jsonEncode(data))
+      //       //JSONENCODE when user sent req to server
+      //       //JSONDECODE when server response to user
+      //       .timeout(Duration(seconds: 10));
+      //   responseJson = returnResponse(response);
       final response = await http
-          .post(Uri.parse(url), body: jsonEncode(data))
-          //JSONENCODE when user sent req to server
-          //JSONDECODE when server response to user
-          .timeout(Duration(seconds: 10));
+          .post(Uri.parse(url), body: data, headers: headers)
+          .timeout(const Duration(seconds: 10));
+
       responseJson = returnResponse(response);
     } on SocketException {
       throw InternetException();

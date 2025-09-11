@@ -60,7 +60,7 @@ class _LoginViewState extends State<LoginView> {
                       );
                     },
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 7),
                   TextFormField(
                     controller: loginView.passwordController.value,
                     focusNode: loginView.passwordFocusNode.value,
@@ -82,12 +82,17 @@ class _LoginViewState extends State<LoginView> {
             ),
 
             SizedBox(height: 20),
-            RoundButton(
-              title: 'login'.tr,
-              width: 144,
-              onPress: () {
-                if (_formkey.currentState!.validate()) {}
-              },
+            Obx(
+              () => RoundButton(
+                loading: loginView.loading.value,
+                title: 'login'.tr,
+                width: 144,
+                onPress: () {
+                  if (_formkey.currentState!.validate()) {
+                    loginView.loginApi();
+                  }
+                },
+              ),
             ),
           ],
         ),

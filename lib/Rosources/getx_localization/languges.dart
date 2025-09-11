@@ -5,6 +5,7 @@ class Languages extends Translations {
     'en_US': {
       'email_hint': "Email",
       'password_hint': "password",
+      'loginS': "login Succesfuly",
       'enter_email': "Enter your Email please",
       'enter_password': "Enter your password please",
       'login': 'login',
